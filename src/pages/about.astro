@@ -4,19 +4,19 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "About Me";
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
+  firstName: "Logos",
+  country: "China",
+  occupation: "College Student",
+  hobbies: ["computer", "writing", "electronic game"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["Using Linux System", "Writing Docs"];
 
 const happy = true;
-const finished = true;
+const finished = false;
 const goal = 3;
 
-const skillColor = "crimson";
+const skillColor = "pink";
 const fontWeight = "";
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -31,12 +31,9 @@ const fontWeight = "";
       }
       </style>
 
-  <h2>Something about me and my new Astro site!</h2>
+  <h2>Here is something about me!</h2>
 
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
+  
   <p>Here are a few facts about me:</p>
   <ul>
     <li>My name is {identity.firstName}.</li>
@@ -55,6 +52,7 @@ const fontWeight = "";
   
   {finished && <p>I finished this tutorial!</p>}
   
-  {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+  {goal === 3 && 0 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
   
+  <p style="color: grey">This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
 </BaseLayout>
