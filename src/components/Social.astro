@@ -1,13 +1,22 @@
 ---
 const { platform, username, ID } = Astro.props;
 ---
-<a>platform: {platform}, ID: {ID}</a>
+<div class="link-group">
+  <a>Platform: {platform}</a>
+  {username && <a>Username: {username}</a>}
+  {ID && <a>ID: {ID}</a>}
+</div>
 
 <style>
+  .link-group {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+  }
   a {
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
     color: white;
-    background-color: #282828;
+    background-color: #0d0950;
     text-decoration: none;
   }
 </style>

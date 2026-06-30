@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My introduction for adding friends'
 pubData: 2026-6-25
 description: 'This is a page introduces about me and what kind person I want to make friend with.'
