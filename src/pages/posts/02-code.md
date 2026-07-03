@@ -11,12 +11,6 @@ author: "Logos"
 #include <stdbool.h>
 
 #define stable_connection_ability 10 // not include my family here
-struct person{
-    bool love_me = false;
-    bool loved_by_me = false;
-    bool independent = false;
-    bool initiative = false;
-}
 
 struct person{
     bool love_me;

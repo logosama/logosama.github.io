@@ -2,9 +2,9 @@
 const { platform, username, ID } = Astro.props;
 ---
 <div class="link-group">
-  <a>Platform: {platform}</a>
-  {username && <a>Username: {username}</a>}
-  {ID && <a>ID: {ID}</a>}
+  {platform && <a>{platform}</a>}
+  {username && <a>{username}</a>}
+  {ID && <a>{ID}</a>}
 </div>
 
 <style>
