@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Coding block test"
-discription: "A test about coding block"
+description: "A test about coding block"
 pubDate: 2026-7-1
 author: "Logos"
 tags: ["code"]

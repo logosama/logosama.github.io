@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "Something about my current phase plans"
 author: "Logos"
 pubDate: 2026-7-1
-discription: "I will update my plans here, most current phase plans or near term plans. And may cntain something else like my status? Who know!😆"
+description: "I will update my plans here, most current phase plans or near term plans. And may cntain something else like my status? Who know!😆"
 tags: ["me"]
 ---
 # Summar Holiday
