@@ -1,19 +1,14 @@
 ---
 import '../styles/global.css';
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const pageTitle = "My Blog"
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<style>
-		a{
-			color: #000000;
-			text-decoration: underline;
-		}
-	</style>
-
 	<p>This is a page that I will post my blog here</p>
 	<ul>
-		{allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+		{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}></BlogPost>)}
 	</ul>
 </BaseLayout>

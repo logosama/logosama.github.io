@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+// getStaticPaths is a inner hook function, the function will be recognised and run automatically when npm run build.
+export async function getStaticPaths() {
+  // dynamically import all md files.
+  const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+
+  // return an paths' array.
+  return [
+    // params is used to generate dynamic routes.
+    // props is the date passed to the current page.
+    {params: {tag: "astro"}, props: {posts: allPosts}},
+    {params: {tag: "me"}, props: {posts: allPosts}},
+    {params: {tag: "social"}, props: {posts: allPosts}},
+    {params: {tag: "code"}, props: {posts: allPosts}},
+  ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.includes(tag));
+// posts.filter() is array's method in Javascript, it will traverse the array's elements and return a new array included only true element
+// (post:any) => { ... } is an arrow function, post is the current object what a traversed. :any means post's type is any
+// post.frontmatter.tags?.includes(tag) is the judging logic, if true, the post will be reserved
+// ?. means if tags exist, then use its value, or return undefied without error reporting to avoid the posts without tag error reporting
+// .include() is a function to judge if tag exists in tags, if true, return true
+---
+<BaseLayout pageTitle={tag}>
+  <p>Posts tagged with [{tag}]</p>
+  <ul>
+    {filteredPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}></BlogPost>)}
+  </ul>
+</BaseLayout>

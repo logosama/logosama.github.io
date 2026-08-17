@@ -4,6 +4,7 @@ title: "Something about my current phase plans"
 author: "Logos"
 pubDate: 2026-7-1
 discription: "I will update my plans here, most current phase plans or near term plans. And may cntain something else like my status? Who know!😆"
+tags: ["me"]
 ---
 # Summar Holiday
 I will go back home and stay for about ten days and then come back to Tianjin for pracicing my oral English as well as English listening.
