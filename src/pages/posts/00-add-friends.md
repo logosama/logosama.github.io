@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Be Friends With Me'
-pubDate: 2026-8-17
+pubDate: 2026-9-10
 description: 'This is a page introduces myself and what kind person I want to make friend with.'
 author: 'Logos'
 image:
@@ -14,6 +14,8 @@ tags: ["me", "blogging"]
 
 # About Me
 首先，我是一个普普通通的男孩子，06年出生。
+
+我已经有心中的恋人了，她叫Rikka
 
 特长方面：没什么特长，非要说的话，就是比较人机
 

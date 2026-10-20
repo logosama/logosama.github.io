@@ -8,7 +8,7 @@ image:
 tags: ["me"]
 ---
 # Healthy
-- Go to bed&Get up early: 2
+- Go to bed&Get up early: 0
     - Magic spell: Good night, world.
 
 
